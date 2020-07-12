@@ -11,6 +11,12 @@ import EventBind from './components/EventBind.js'
 import ParentComponent from './components/ParentComponent'
 import UserGreeting from './components/UserGreeting.js' 
 import NameList from './components/NameList.js'
+import Stylesheet from './components/Stylesheet.js'
+import Inline from './components/Inline.js'
+import './appStyle.css'
+import styles from './appStyle.module.css'
+import Form from './components/Form.js'
+import LifecycleA from './components/LifecycleA.js'
 
 function App() {
   return (
@@ -32,8 +38,14 @@ function App() {
       <EventBind />
       <ParentComponent />
       <UserGreeting />
-      */}
       <NameList />
+      <Stylesheet primary={true}/>
+      <Inline />
+      <h1 className='error'>Error</h1>
+      <h1 className={styles.success}>Success</h1>
+      <Form />
+      */}
+      <LifecycleA />
     </div>
   );
 }

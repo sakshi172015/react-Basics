@@ -1,0 +1,4 @@
+/*css appplies to every child component as well can cause css conflicts*/
+.error {
+    color: red
+}
