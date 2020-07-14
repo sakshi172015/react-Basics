@@ -24,7 +24,15 @@ import ParentComp from './components/ParentComp.js'
 import RefsDemo from './components/RefsDemo';
 import FocusInput from './components/FocusInput';
 import FRParentInput from './components/FRParentInput';
-
+import PortalDemo from './components/PortalDemo';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
+import ClickCounterTwo from './components/ClickCounterTwo';
+import HoverCounterTwo from './components/HoverCounterTwo';
+import User from './components/User.js'
+import CounterPropsRender from './components/CounterPropsRender.js'
 function App() {
   return (
     <div className="App">
@@ -57,8 +65,32 @@ function App() {
       <ParentComp />
       <RefsDemo />
       <FocusInput />
-      */}
       <FRParentInput />
+      <PortalDemo />
+      <ErrorBoundary>
+        <Hero heroName="Batman"/>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroName="Superman"/>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroName="Joker"/>
+      </ErrorBoundary>
+      <ClickCounter name="Sakshi"/>
+      <HoverCounter />
+      <ClickCounterTwo />
+      <HoverCounterTwo />
+      <User render={(isLoggedIn) => isLoggedIn ? "Sakshi" : "Guest" }/> {/* instead of passing sakshi ill pass a function that retrun sakshi 
+      */}
+      <CounterPropsRender 
+        render={(count, incrementCount) => (
+           <ClickCounterTwo count={count} incrementCount={incrementCount} />
+      )} />
+      <CounterPropsRender 
+        render={(count, incrementCount) => (
+           <HoverCounterTwo count={count} incrementCount={incrementCount} />
+      )} />
+  
     </div>
   );
 }
