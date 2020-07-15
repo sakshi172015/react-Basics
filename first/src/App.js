@@ -33,6 +33,10 @@ import ClickCounterTwo from './components/ClickCounterTwo';
 import HoverCounterTwo from './components/HoverCounterTwo';
 import User from './components/User.js'
 import CounterPropsRender from './components/CounterPropsRender.js'
+import ComponentC from './components/ComponentC.js';
+import { UserProvider } from './components/UserContext.js'
+import PostList from './components/PostList';
+import PostForm from './components/PostForm.js'
 function App() {
   return (
     <div className="App">
@@ -81,7 +85,6 @@ function App() {
       <ClickCounterTwo />
       <HoverCounterTwo />
       <User render={(isLoggedIn) => isLoggedIn ? "Sakshi" : "Guest" }/> {/* instead of passing sakshi ill pass a function that retrun sakshi 
-      */}
       <CounterPropsRender 
         render={(count, incrementCount) => (
            <ClickCounterTwo count={count} incrementCount={incrementCount} />
@@ -90,7 +93,12 @@ function App() {
         render={(count, incrementCount) => (
            <HoverCounterTwo count={count} incrementCount={incrementCount} />
       )} />
-  
+      <UserProvider value="Sakshi">
+        <ComponentC />
+      </UserProvider>
+      <PostList />
+      */}
+      <PostForm />
     </div>
   );
 }
