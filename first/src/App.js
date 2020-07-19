@@ -37,6 +37,18 @@ import ComponentC from './components/ComponentC.js';
 import { UserProvider } from './components/UserContext.js'
 import PostList from './components/PostList';
 import PostForm from './components/PostForm.js'
+import ClassCounter from './components/ClassCounter.js'
+import HookCounter from './components/HookCounter';
+import HookCounter2 from './components/HookCounter2';
+import HookCounter3 from './components/HookCounter3';
+import HookCounter4 from './components/HookCounter4';
+import ClassCounterOne from './components/ClassCounterOne';
+import HookCounterOne from './components/HookCounterOne';
+import ClassMouse from './components/ClassMouse';
+import HookMouse from './components/HookMouse';
+import MouseContainer from './components/MouseContainer';
+import IntervalClassCounter from './components/IntervalClassCounter';
+import IntervalHookCounter from './components/IntervalHookCounter';
 function App() {
   return (
     <div className="App">
@@ -97,8 +109,20 @@ function App() {
         <ComponentC />
       </UserProvider>
       <PostList />
-      */}
       <PostForm />
+      <ClassCounter />
+      <HookCounter />
+      <HookCounter2 />
+      <HookCounter3 />
+      <HookCounter4 />
+      <ClassCounterOne />
+      <HookCounterOne />
+      <ClassMouse />
+      <HookMouse />
+      <MouseContainer />
+        */}
+      <IntervalClassCounter />
+      <IntervalHookCounter />
     </div>
   );
 }
